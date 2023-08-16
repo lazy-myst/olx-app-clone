@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+.main{
+    background-color: #FFFFFF;
+    height: 100%;
+    width: 100%;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 65px;
+    background-color: #F7F8F8;
+}
+.nav-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px 0;
+}
+.nav-wrapper img{
+    margin-left: 20px;
+}
+.posting-section{
+    padding: 20px 40px;
+}
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px;
+}
+.title p{
+    color: #002F34;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.upload-ads{
+    border: 1px solid #002f34;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+.details{
+    padding: 10px 20px;
+    border-bottom: 1px solid #002F34;
+}
+
+.details h2 {
+    color: #002f34;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+.details p {
+    color: #002f34;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;   
+}
+#title{
+    margin-bottom: 20px;
+}
+.details input, textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #002f34;
+    padding: 15px 0 15px 10px;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 15px;
+    resize: none;
+}
+.details #description {
+    height: 120px;
+}
+.upload-photos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+.photos{
+    display: none;
+    cursor: pointer;
+}
+.images{
+    margin: 10px;
+    height: 100px;
+    width: 100px;
+    border: 1px solid #DEDEDE;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#image1{
+    height: 100px;
+    width: 100px;
+}
+.details button{
+    padding: 15px 30px;
+    background-color: #002F34;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLX</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/detail.css">
+    <link rel="stylesheet" href="../css/chat.css">
+
+</head>
+
+<body>
+
+
+    <div class="main">
+        <div id="login-card" onclick="loginCard(event)">
+            <div class="login-card-container">
+                <div id="cancel-btn">
+                    <img src="../Images/xmark-solid.svg" onclick="closeCard()" height="25px" alt="">
+                </div>
+                <div id="form">
+                    <div class="form-titlebox">
+                        <img src="../Images/iconOLXLogin_noinline.93e8a1a9cf50902ba5250814f57810ff.svg" height="70px"
+                            alt="">
+                        <span>WELCOME TO OLX</span>
+                        <span>The trusted community of buyers and sellers.</span>
+                    </div>
+                    <div id="buttons">
+                        <button>
+                            <img src="../Images/iconGoogleLogin_noinline.633b1f5afb5219bedca01d2367642a28.svg"
+                                height="25px" alt="">
+                            <span>Continue with Google</span>
+                        </button>
+                        <button>
+                            <img src="../Images/iconFacebookLogin_noinline.70f71af03bbf63ca01a044ff5c5eb342.svg"
+                                height="25px" alt="">
+                            <span>Continue with Facebook</span>
+                        </button>
+                        <button onclick="emailBtn()">
+                            <img src="../Images/iconMailLogin_noinline.248b2cbda65d833f5f8f87f18a346cc9.svg"
+                                height="25px" alt="">
+                            <span>Continue with Email</span>
+                        </button>
+                        <button>
+                            <img src="../Images/iconPhoneLogin_noinline.4dcd5ec6754daea7e5c3db60df33309c.svg"
+                                height="25px" alt="">
+                            <span>Continue with Phone</span>
+                        </button>
+                    </div>
+                </div>
+                <div id="email-form">
+                    <div onclick="backwardBtn()">
+                        <img src="../Images/arrow-left-long-solid.svg" height="25px" alt="">
+                    </div>
+                    <div class="form-titlebox">
+                        <img src="../Images/iconOLXLogin_noinline.93e8a1a9cf50902ba5250814f57810ff.svg" height="30px"
+                            alt="">
+                        <span>Login your Account</span>
+                    </div>
+                    <div id="input">
+                        <input type="email" placeholder="Email" id="email">
+                        <input type="password" placeholder="Password" id="password">
+                        <div id="login-error">
+                            <p id="lg-error"></p>
+                        </div>
+                        <button onclick="login()">Login</button>
+                    </div>
+                    <div class="bottom-title">
+                        <p>Don't have an account ? <span id="sign-up-btn" onclick="signUpBtn()">Sign Up</span></p>
+                    </div>
+                </div>
+                <div id="register-form">
+                    <div class="form-titlebox">
+                        <img src="../Images/iconOLXLogin_noinline.93e8a1a9cf50902ba5250814f57810ff.svg" height="30px"
+                            alt="">
+                        <span>Register Yourself</span>
+                    </div>
+                    <div id="input">
+                        <input type="text" placeholder="Username" id="username-registered">
+                        <input type="number" placeholder="Age" id="age-registered">
+                        <input type="email" placeholder="Email" id="email-registered">
+                        <input type="password" placeholder="Password" id="password-registered">
+                        <div id="signup-error">
+                            <p id="error"></p>
+                        </div>
+                        <button onclick="signUp()">SignUp</button>
+                    </div>
+                    <div class="bottom-title">
+                        <p>We won't reveal your email to anyone else nor use it to send you spam</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar">
+            <div class="top-nav-sc">
+                <div class="logo">
+                    <img height="20px" onclick="window.location.href='../index.html'" src="../Images/OLX-Logo.png"
+                        alt="">
+                </div>
+                <div class="motors">
+                    <img height="20px" src="../Images/car-solid.svg" alt="">
+                    <p>MOTORS</p>
+                </div>
+                <div class="property">
+                    <img height="18px" src="../Images/building-regular.svg" alt="">
+                    <p>PROPERTY</p>
+                </div>
+            </div>
+            <div class="bottom-nav-sc">
+                <div class="main-logo">
+                    <img onclick="window.location.href='../index.html'"
+                        src="../Images/logo_noinline.1cdf230e49c0530ad4b8d43e37ecc4a4.svg" height="60px" alt="">
+                </div>
+                <div class="location">
+                    <img src="../Images/magnifying-glass-solid.svg" height="20px" alt="">
+                    <input placeholder="Pakistan">
+                </div>
+                <div class="items">
+                    <input placeholder="Find Cars, Mobiles Phones and more...">
+                    <button><img src="../Images/magnifying-glass-solid.svg" height="20px" alt=""></button>
+                </div>
+                <div class="login-btn" id="login-btn-container">
+                    <button onclick="loginBtn()">Login</button>
+                </div>
+                <div class="logged-in" id="logged-in">
+                    <div class="comment-logo">
+                        <img src="../Images/comment-regular.svg" height="25px" alt="">
+                    </div>
+                    <div class="notification-logo">
+                        <img src="../Images/bell-regular.svg" height="25px" alt="">
+                    </div>
+                    <div class="user-logo">
+                        <img src="../Images/user.png" height="35px" alt="">
+                        <img id="user-dropdown"
+                            src="../Images/iconArrowDown_noinline.ec05eae7013321c193965ef15d4e2174.svg" height="15px"
+                            onclick="dropDown()" alt="">
+                        <div class="user-drop-down" id="drop-down">
+                            <div class="drop-down-menu">
+                                <div class="user-details-container">
+                                    <div class="user-pfp">
+                                        <img src="../Images/user.png" height="40px" alt="">
+                                    </div>
+                                    <div class="user-details">
+                                        <p>Hello,</p>
+                                        <h4 id="user-username"></h4>
+                                    </div>
+                                </div>
+                                <div class="drop-down-options">
+                                    <div class="options" onclick="goToMyAds()">
+                                        <img src="../Images/iconMyAds_noinline.81f6b0cc8a3d16d363fb142e1489d035.svg"
+                                            alt="">
+                                        <h5>My ads</h5>
+                                    </div>
+                                    <div class="options" id="logout" onclick="logout()">
+                                        <img src="../Images/iconLogout_noinline.9da9ed94dfe84e900cc1ae3198b0375b.svg"
+                                            alt="">
+                                        <h5>Logout</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn">
+                    <button onclick="postBtn()">
+                        <img src="../Images/iconSellBorder_noinline.d9eebe038fbfae9f90fd61d971037e02.svg" alt="">
+                        <div class="btn-items">
+                            <img src="../Images/iconPlusSell_noinline.75fc7ea23e80b50447cf5757d8ef083a.svg"
+                                height="16px" alt="">
+                            <span>Sell</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="categories-container">
+            <div class="categories">
+                <div id="all-categories">
+                    ALL CATEGORIES
+                    <img src="../Images/iconArrowDown_noinline.ec05eae7013321c193965ef15d4e2174.svg" height="20px"
+                        alt="">
+                </div>
+                <span class="categories-options">Mobile Phones</span>
+                <span class="categories-options">Cars</span>
+                <span class="categories-options">Motorcycles</span>
+                <span class="categories-options">Houses</span>
+                <span class="categories-options">TV-Video-Audio</span>
+                <span class="categories-options">Tablets</span>
+                <span class="categories-options">Land & Plots</span>
+            </div>
+        </div>
+        <div class="chat-main-container">
+            <div class="chat-main-wrapper">
+                <div class="seller-details-chat">
+                    <img src="../Images/user.png" alt="">
+                    <span id="chat-username">User123</span>
+                    <div class="chat-options">
+                        <img src="../Images/flag_noinline.e07faa862e569448684a7fa170f5ceda.svg" alt="">
+                        <img src="../Images/phone-solid.svg" alt="">
+                        <img src="../Images/comment-sms-solid.svg" alt="">
+                        <img src="../Images/ellipsis-vertical-solid.svg" alt="">
+                        <img src="../Images/xmark-solid.svg" alt="">
+                    </div>
+                </div>
+                <div id="chat">
+                    <!-- <div class="user-message-styling">
+                        <pre>Hello, Kesa hai Bhai</pre>
+                    </div>
+                    <div class="my-message-styling">
+                        <pre>Hello, Kesa hai Bhai</pre>
+                    </div> -->
+                </div>
+
+                <div class="messages-container">
+                    <div class="messages-wrapper">
+                        <textarea id="message" spellcheck="false" autocomplete="off" placeholder="Type a message"></textarea>
+                        <img src="../Images/74-749231_message-icon-png.png" onclick="sendMessage()" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="inbox-container">
+                    <div class="inbox-title">
+                        <span>Inbox</span>
+                    </div>
+                    <div class="filter-container">
+                        <span>QUICK FILTERS</span>
+                        <div class="filter-buttons-container">
+                            <span id="all" class="filter-buttons">All</span>
+                            <span id="unread" class="filter-buttons">Unread Chats</span>
+                            <span id="important" class="filter-buttons">Important</span>
+                        </div>
+                    </div>
+                    <div id="chats">
+                        <div class="chats">
+                            <img id="seller-pfp" src="../Images/user.png" alt="">
+                            <div class="chat-details">
+                                <span id="seller-username-chat">ABC</span>
+                                <span id="ad-title">Weed</span>
+                                <span id="last-text">Hello</span>
+                            </div>
+                            <div class="chat-options">
+                                <span id="text-time">12:00</span>
+                                <img src="../Images/ellipsis-vertical-solid.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="chats">
+                            <img id="seller-pfp" src="../Images/user.png" alt="">
+                            <div class="chat-details">
+                                <span id="seller-username-chat">ABC</span>
+                                <span id="ad-title">Weed</span>
+                                <span id="last-text">Hello</span>
+                            </div>
+                            <div class="chat-options">
+                                <span id="text-time">12:00</span>
+                                <img src="../Images/ellipsis-vertical-solid.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+
+    <script src="../js/style.js"></script>
+    <script type="module" src="../js/app.js"></script>
+    <script type="module" src="../js/chat.js"></script>
+    <script type="module" src="../config/firebase.js"></script>
+
+
+
+</body>
+
+</html>

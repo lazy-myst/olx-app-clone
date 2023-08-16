@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLX</title>
+    <link rel="stylesheet" href="../css/addform.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="nav-wrapper">
+                <img src="../Images/arrow-left-solid.svg" height="25px" style="cursor: pointer;" onclick="window.location.href='../index.html'" alt="">
+                <img src="../Images/logo_noinline.1cdf230e49c0530ad4b8d43e37ecc4a4.svg" height="60px"  alt="">
+            </div>
+        </div>
+        <div class="posting-section">
+            <div class="title">
+                <p>Post your ad</p>
+            </div>
+            <div class="upload-ads">
+                <div class="details">
+                    <h2>Inculde Some Details</h2>
+                    <p>Ad title</p>
+                    <input id="title">
+                    <p>Description</p>
+                    <textarea  id="description"></textarea>
+                </div>
+                <div class="details">
+                    <h2>set a price</h2>
+                    <p>Price</p>
+                    <input type="number" id="price">
+                </div>
+                <div class="details">
+                    <h2>Upload Up To 1 Photo</h2>
+                    <label class="upload-photos">
+                        <input class="photos"  id="image" accept=".jpg,.png" multiple type="file">
+                        <div class="images">
+                            <img id="image1" src="../Images/iconAddPhoto_noinline.8924e2486f689a28af51da37a7bda6ec.svg" alt="">
+                        </div>
+                        <!-- <div class="images">
+                            <img src="../Images/iconAddPhoto_noinline.8924e2486f689a28af51da37a7bda6ec.svg" alt="">
+                        </div>
+                        <div class="images">
+                            <img src="../Images/iconAddPhoto_noinline.8924e2486f689a28af51da37a7bda6ec.svg" alt="">
+                        </div>
+                        <div class="images">
+                            <img src="../Images/iconAddPhoto_noinline.8924e2486f689a28af51da37a7bda6ec.svg" alt="">
+                        </div>
+                        <div class="images">
+                            <img src="../Images/iconAddPhoto_noinline.8924e2486f689a28af51da37a7bda6ec.svg" alt="">
+                        </div>
+                        <div class="images">
+                            <img src="../Images/iconAddPhoto_noinline.8924e2486f689a28af51da37a7bda6ec.svg" alt="">
+                        </div>
+                        <div class="images">
+                            <img src="../Images/iconAddPhoto_noinline.8924e2486f689a28af51da37a7bda6ec.svg" alt="">
+                        </div>
+                        <div class="images">
+                            <img src="../Images/iconAddPhoto_noinline.8924e2486f689a28af51da37a7bda6ec.svg" alt="">
+                        </div>
+                        <div class="images">
+                            <img src="../Images/iconAddPhoto_noinline.8924e2486f689a28af51da37a7bda6ec.svg" alt="">
+                        </div>
+                        <div class="images">
+                            <img src="../Images/iconAddPhoto_noinline.8924e2486f689a28af51da37a7bda6ec.svg" alt="">
+                        </div> -->
+                    </label>
+                </div>
+                <div class="details">
+                    <button onclick="getUserPost()">Post Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/style.js"></script>
+    <script type="module" src="../js/addform.js"></script>
+    <script type="module" src="../js/app.js"></script>
+    <script type="module" src="../config/firebase.js"></script>
+</body>
+
+</html>
